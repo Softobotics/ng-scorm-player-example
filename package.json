@@ -19,6 +19,8 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "express": "^4.16.4",
+    "path": "^0.12.7",
     "ng-scorm-player": "^0.1.1",
     "rxjs": "~6.4.0",
     "scorm-promised": "^1.1.6",
