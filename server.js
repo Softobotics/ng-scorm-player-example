@@ -4,7 +4,7 @@ const path = require('path');
 
 const app = express();
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/scrom-example'));
+//app.use(express.static(__dirname + '/dist/scrom-example'));
 
 app.get('/*', function (req, res) {
     res.header("Access-Control-Allow-Origin", '*');
