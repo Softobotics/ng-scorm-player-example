@@ -17,12 +17,9 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
 
-    window.onload = function () {
-      var receiverWindow = document.getElementById('receiver') as HTMLIFrameElement;
-      console.log(receiverWindow.contentWindow);
-      receiverWindow.contentWindow.postMessage("helll", "https://test-website-demo-1.s3.us-east-2.amazonaws.com");
-
-   }
+    //window.onload = function () {
+      
+   //}
 
   }
 
@@ -33,7 +30,11 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   return() {
-    console.log();
+    console.log("dsdsd");
+    const receiverWindow = document.getElementById('receiver') as HTMLIFrameElement;
+      console.log(receiverWindow.contentWindow);
+     receiverWindow.contentWindow.postMessage("helll", "*");
+
   }
 
 }
