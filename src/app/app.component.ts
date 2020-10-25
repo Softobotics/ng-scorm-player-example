@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,13 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit, AfterViewInit {
 
-  constructor() {
+  constructor(public sanitizer: DomSanitizer) {
   }
+
+  getSourceURL() {
+    return this.sanitizer.bypassSecurityTrustResourceUrl("https://test-website-demo-1.s3.us-east-2.amazonaws.com/english/player.html?WorkplaceAntiHarassment/index_lms.html");
+}
+
   ngAfterViewInit(): void {
 
     window.onload = function () {
@@ -16,7 +22,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       console.log(receiverWindow.contentWindow);
       receiverWindow.contentWindow.postMessage("helll", "https://test-website-demo-1.s3.us-east-2.amazonaws.com");
 
-    }
+   }
 
   }
 
